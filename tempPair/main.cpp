@@ -1,15 +1,16 @@
 #include <iostream>
 #include <string>
 #include <map>
+//#include "maps.h"
 #include "Pairs.h"
 
 
 template <typename T1, typename T2>
 void menu()
 {
-    //Pair<T1, T2> p1, p2;
     int choice;
     int i = 1;
+    //maps<int , Pairs<T1,T2>> m1
     std::map<int, Pair<T1, T2 >> m1;
     do
     {
@@ -20,7 +21,7 @@ void menu()
         std::cout << "4. Compare (==)\n";
         std::cout << "5. Swap Pairs\n";
 		std::cout << "6. Exit\n";
-        std::cout << "\----------------------------\n";
+        std::cout << "----------------------------\n";
         std::cout << "Enter choice: ";
         std::cin >> choice;
 
@@ -48,6 +49,8 @@ void menu()
             {
                 std::cout << value.first << " : ";
                 value.second.display();
+                /*std::cout << value.mapFirst() << " : ";
+                value.mapSecond().display();*/
             }
             break;
         }
