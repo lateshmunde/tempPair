@@ -14,7 +14,7 @@ void menu()
     std::map<int, Pair<T1, T2 >> m1;
     do
     {
-        std::cout << "------------ MENU-----------\n";
+        std::cout << "------------MENU-----------\n";
         std::cout << "1. Add Pair\n";
         std::cout << "2. Display Pairs\n";
         std::cout << "3. Change values in Pair\n";
@@ -123,8 +123,7 @@ void menu()
 int main() {
   
 	menu<int, std::string>();
-   
- 
+    //menu<int, double>();
 
 	return 0;
 

@@ -14,14 +14,14 @@ private:
 public:
 	void insert(const T1& key, const T2& value)
 	{
-		Pair.setFirst()  = key
+		Pair.setFirst() = key;
 		Pair.setSecond() = value;
 
-		data.push_back(Pair (key, value));
+		mapTemp.push_back(Pair (key, value));
 
 	}
 
-	void mapFirst(const T1& key, const T2& value)
+	void mapFirst(const Pair<T1, T2>& pr)
 	{
 		return pr.getFirst();
 	}
