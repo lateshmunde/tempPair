@@ -13,16 +13,15 @@ void menu()
     std::map<int, Pair<T1, T2 >> m1;
     do
     {
-        std::cout << "\n------------ MENU-----------\n";
+        std::cout << "------------ MENU-----------\n";
         std::cout << "1. Add Pair\n";
         std::cout << "2. Display Pairs\n";
         std::cout << "3. Change values in Pair\n";
         std::cout << "4. Compare (==)\n";
         std::cout << "5. Swap Pairs\n";
 		std::cout << "6. Exit\n";
-        std::cout << "7. Back to main menu\n";
+        std::cout << "\----------------------------\n";
         std::cout << "Enter choice: ";
-        std::cout << "\n----------------------------\n";
         std::cin >> choice;
 
         switch (choice) {
@@ -93,21 +92,20 @@ void menu()
             int key2;
             std::cout << " Enter key 2 of pair to swap values: ";
             std::cin >> key2;
-            m1[key1].display();
-            m1[key2].display();
 
             swap(m1[key1], m1[key2]);
+
+            for (auto value : m1)
+            {
+                std::cout << value.first << " : ";
+                value.second.display();
+            }
 
             break;
         }
         case 6:
         {
             std::cout << " Exiting\n";
-            break;
-        }
-        case 7:
-        {
-            std::cout << "Returning to main menu.\n";
             break;
         }
         default:
@@ -122,6 +120,8 @@ void menu()
 int main() {
   
 	menu<int, std::string>();
+   
+ 
 
 	return 0;
 
