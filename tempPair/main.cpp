@@ -127,7 +127,7 @@ int main() {
 
     Subject s1("english", 1, 92);
     Subject s2("maths", 1, 93);
-    Subject s3("english", 1, 92);
+    Subject s3("english", 1, 93);
     Subject s4("science", 1, 95);
     Subject s5("histroy", 1, 96);
     Subject s6("maths", 1, 93);
@@ -137,10 +137,10 @@ int main() {
     Pair<int, Subject> p3(1, s2);
     Pair<int, Subject> p4(1, s6);
 
-    std::cout << (p1 == p2);
-    std::cout << (p1 == p3); 
-    std::cout << (p3 == p2);
-    std::cout << (p3 == p4);
+    std::cout << (p1 == p2) << std::endl;
+    std::cout << (p1 == p3) << std::endl;
+    std::cout << (p3 == p2) << std::endl;
+    std::cout << (p3 == p4) << std::endl;
 
 	//menu<int, std::string>();
     //menu<int, double>();

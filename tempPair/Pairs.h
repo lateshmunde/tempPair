@@ -27,21 +27,14 @@ public:
     }
 
 
-    bool operator==(const Subject& s1)
-    {
-        return (this->marks == s1.marks) && (this->rollNo == s1.rollNo) && (this->subName == s1.subName);
-      
-    }
-
-
     bool operator==(const Pair& other)
     {
-		return (this->first == other.first) && (this->second == other.second);
+		return (first == other.first) && (second == other.second);
     }
+
 
     bool operator!=(const Pair& other)
     {
-		return !(*this == other);
 		return !(*this == other);
     }
 
