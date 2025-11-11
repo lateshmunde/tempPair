@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <Algorithm>
+#include "Subject.h"
+
 
 template <typename T1, typename T2>
 class Pair {
@@ -24,13 +26,22 @@ public:
         std::cout << "(" << first << ", " << second << ")\n";
     }
 
+
+    bool operator==(const Subject& s1)
+    {
+        return (this->marks == s1.marks) && (this->rollNo == s1.rollNo) && (this->subName == s1.subName);
+      
+    }
+
+
     bool operator==(const Pair& other)
     {
-		return (first == other.first) && (second == other.second);
+		return (this->first == other.first) && (this->second == other.second);
     }
 
     bool operator!=(const Pair& other)
     {
+		return !(*this == other);
 		return !(*this == other);
     }
 

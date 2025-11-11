@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClInclude Include="maps.h" />
     <ClInclude Include="Pairs.h" />
+    <ClInclude Include="Subject.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

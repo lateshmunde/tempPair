@@ -5,6 +5,8 @@
 #include "Pairs.h"
 
 
+
+
 template <typename T1, typename T2>
 void menu()
 {
@@ -122,7 +124,25 @@ void menu()
 
 int main() {
   
-	menu<int, std::string>();
+
+    Subject s1("english", 1, 92);
+    Subject s2("maths", 1, 93);
+    Subject s3("english", 1, 92);
+    Subject s4("science", 1, 95);
+    Subject s5("histroy", 1, 96);
+    Subject s6("maths", 1, 93);
+
+    Pair<int, Subject> p1(1, s1);
+    Pair<int, Subject> p2(1, s3);
+    Pair<int, Subject> p3(1, s2);
+    Pair<int, Subject> p4(1, s6);
+
+    std::cout << (p1 == p2);
+    std::cout << (p1 == p3); 
+    std::cout << (p3 == p2);
+    std::cout << (p3 == p4);
+
+	//menu<int, std::string>();
     //menu<int, double>();
 
 	return 0;
